@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Tabel Content</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <table border="1" align="center">
+        <!-- tabel header -->
+        <thead bgcolor="#B5C0D0">
+            <tr>
+                <th>Hari</th>
+                <th>Jam</th>
+                <th>Mata Kuliah</th>
+                <th>Dosen</th>
+                <th>Ruang</th>
+            </tr>
+        </thead>
+        <!-- Tabel data -->
+        <tbody>
+            <!-- colom hari senin  -->
+            <tr>
+                <td rowspan="2">Senin</td>
+                <td>08:00 - 10:00</td>
+                <td>Kajian islam</td>
+                <td>ustad ku.com</td>
+                <td>Ruang Teori</td>
+            </tr>
+            <tr>
+                <td>10:00 - 12:00</td>
+                <td>Aplikasi perkantoran</td>
+                <td>Drs. MGS Hendry, MM</td>
+            </tr>
+            <!-- colom hari selasa -->
+            <tr>
+                <td rowspan="2">Selasa</td>
+                <td>08:00 - 10:00</td>
+                <td>linux fundamental</td>
+                <td>Henry Saptono, S.Si,M.Kom</td>
+                <!-- untuk mengosongkan 4 kolom -->
+                <td rowspan="4">Ruang 1</td>
+            </tr>
+            <tr>
+                <td>02:00 - 12:00</td>
+                <td>Html, css & Javascrift</td>
+                <td rowspan="3">Sirojul Munie, S.Si, M.Kom</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">Rabu</td>
+                <td>08:00 - 10:00</td>
+                <td>Basis Data</td>
+            </tr>
+            <tr>
+                <td>08:00 - 10:00</td>
+                <td>Algoritma Dan Pemerograman</td>
+            </tr>
+            
+            <tr>
+                <td rowspan="2">Kamis</td>
+                <td>08:00 - 10:00</td>
+                <td>Kajian islam</td>
+                <td>ustad ku.com</td>
+                <td rowspan="2">Ruang Teori</td>
+            </tr>
+            <tr>
+                <td>10:00 - 12:00</td>
+                <td>Aplikasi perkantoran</td>
+                <td>Drs. MGS Hendry, MM</td>
+            </tr>
+        </tbody>
+        <!-- tabel footer -->
+        <tfoot bgcolor="B5C0D0">
+            <tr align="center" >
+                <td colspan="5">JADWAL DAPAT BERUBAH SEWAKTU WAKTU</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

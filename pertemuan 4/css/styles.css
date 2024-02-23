@@ -1,0 +1,56 @@
+body{
+    background-color: brown;
+}
+p{
+    color: aqua;
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12pt;
+}
+body{
+    background-color: aqua;
+    background-image: url('../image/cat-love.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+fieldset , legend{
+    border-width: 1px;
+    border-color: blue;
+    border-radius: 30px;
+}
+legend{
+    padding: 10px;
+    background-color: yellow;
+    color: red;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+table{
+    border: 10px;
+    margin: auto;
+    background-color: red;
+}
+tr{
+    padding: 5px;
+    border: 1px solid green;
+}
+/* td , th{
+    padding: 5px;
+    border: 1px solid green;
+} */
+
+tr:hover{
+    background-color: blue;
+}
+
+#paragraf{
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    color: blue;
+    /* border: 10px; */
+    /* margin: auto; */
+    /* background-color: red; */
+}

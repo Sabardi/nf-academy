@@ -1,0 +1,132 @@
+body{
+   background-color: darkturquoise;
+   margin: 0%;
+}
+
+.header{
+    background-color: rgb(3, 18, 31);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header img{
+    width: 50%;
+}
+
+/* Navbar*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30%;
+}
+.logo, img{
+    display: flex;
+    width: 40px;
+    align-items: center;
+    margin-right: 10px; /*jarak antara gambar dan teks nya */
+}
+
+.logo h1:hover{
+    color: aliceblue;
+    text-decoration: underline;
+}
+/* menu navbar */
+.menu ul{
+    display: inline-flex ;
+}
+.menu li{
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.menu li a {
+    /* color: white; */
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* right */
+fieldset{
+    border-width: 1px;
+    border-color: blue;
+    border-radius: 30px;
+    background-image: url('../image/cat-love.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+legend{
+    text-decoration: underline;
+    padding: 10px;
+    font-size: 14pt;
+}
+
+.right li{
+    text-align: center;
+    list-style: none;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.right li a {
+    /* color: white; */
+    text-decoration: none;
+}
+
+.right li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+/* left */
+.left li{
+    text-align: center;
+    list-style: none;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.left li a {
+    /* color: white; */
+    text-decoration: none;
+}
+
+.left li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* main nya */
+
+.judul h1{
+    color: blue;
+}
+.nama-menu h1{
+    color: black;
+    font-size: 30pt;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.frame{
+    border: 1px;
+    border-radius: 10px;
+    background-color: yellow;
+    text-align: center;
+    margin: 32px;
+}
+
+
+.footer{
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: blue;
+    /* align-items: center; */
+    text-align: center;
+}
