@@ -63,6 +63,7 @@
     let nama = "Ridwan" 
     let jabatan = "Manager"
     let status = "menikah"
+    // inisiasi keperluan
     let gaji_pokok , tunjangan, bpjs, keluarga
 
     
@@ -77,21 +78,18 @@
 
 // hitung tunjangan 
 tunjangan = 0.15 * gaji_pokok
-// console.log("tunjangan " + tunjangan)
 
 // hasil sebelum potong bpjs 
 let hasil = gaji_pokok + tunjangan
-// console.log("befor potong bpjs = " + hasil)
+
 // hitung bjs
 bpjs = 0.1*gaji_pokok
-// console.log("bpjs = " + bpjs)
 
+// potongan gaji untuk bpjs
 let hitung = hasil - bpjs
-// console.log("upter potong bpjs = " + hitung)
 
 // jika menikah/keluarga
 keluarga = (status == "menikah") ? 0.2 * gaji_pokok:0
-// console.log("tunjangan keluarga = " + keluarga)
 
 // gaji pokok dan tunjangan di tambah dengan tunjangan keluarga
 let gaji_bersih = keluarga + hitung
@@ -105,8 +103,8 @@ console.log("gaji bersih = "+ gaji_bersih)
     document.getElementById("tunjangan_jabatan").innerText = "Rp."+ tunjangan;
     document.getElementById("tunjangan_keluarga").innerText ="Rp."+ keluarga;
     document.getElementById("bpjs").innerText = "-"+ "Rp."+ bpjs;
-    document.getElementById("gaji_nya").innerText = gaji_bersih;
-    document.getElementById("gaji_nya").innerText = gaji_bersih;
+    document.getElementById("gaji_nya").innerText = "Rp."+ gaji_bersih;
+    document.getElementById("gaji_nya").innerText = "Rp."+ gaji_bersih;
 </script>
 
 </body>
