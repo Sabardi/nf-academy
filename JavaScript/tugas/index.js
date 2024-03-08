@@ -37,8 +37,8 @@ let tunjangan_jabatan = 0.15* gaji_pokok
 // inisiasi bpjs 10%
 let bpjs = 0.1* gaji_pokok
 let total = tunjangan_jabatan + bpjs + gaji_pokok
+console.log("total : "+ total)
 // jika menikah/keluarga
 let keluarga = (status == "menikah") ? 0.2 * gaji_pokok:0
-console.log("total : "+ total)
 let hslnikah = tunjangan_jabatan + bpjs + keluarga + gaji_pokok
 console.log("total gaji : "+ hslnikah)

@@ -21,47 +21,76 @@
     <!-- Tabel data -->
     <tbody>
         <tr>
-           <td>Nama :</td>
+           <td>Nama</td>
            <td id="nama"></td>
         </tr>
         <tr>
-            <td>Jabatan :</td>
+            <td>Jabatan</td>
             <td id="jabatan"></td>
         </tr>
         <tr>
-            <td>Status :</td>
+            <td>Status</td>
             <td id="status"></td>
         </tr>
         <tr>
-            <td>Gaji Pokok :</td>
+            <td>Gaji Pokok</td>
             <td id="gaji_pokok"></td>
+        </tr>
+        <tr>
+            <td>Tunjangan Jabatan</td>
+            <td id="tunjangan_jabatan"></td>
+        </tr>
+        <tr>
+            <td>Tunjangan Bpjs</td>
+            <td id="bpjs"></td>
         </tr>
     </tbody>
     <!-- tabel footer -->
     <tfoot bgcolor="B5C0D0">
         <tr>
             <td>Total Gaji</td>
-            <td id="total_gaji"></td>
+            <td id="gaji_nya"></td>
         </tr>
     </tfoot>
 </table>
 
 <script>
-    // Menyiapkan data
-    var data = {
-        nama: "Ahmad",
-        jabatan: "Pegawai",
-        status: "Menikah",
-        gaji_pokok: "Rp 5.000.000",
-        total_gaji: "Rp .000" // misalnya total gaji ditambah Rp 1.000.000
-    };
+    // inisiasi variabel nya
+    let nama = "Ridwan" 
+    let jabatan = "Manager"
+    let status = "menikah"
+    let gaji_pokok
+    
+    // inisiasi pekerjaannya jika gaji nya tsb 
+    if(jabatan == "Manager"){
+        gaji_pokok = 15000000
+    }else if(jabatan == "Asisten Manager"){
+        gaji_pokok = 10000000
+    }else if(jabatan == "Staff"){
+        gaji_pokok = 5000000
+    }
 
+    // tunjangan 15%
+    let tunjangan_jabatan = 0.15* gaji_pokok
+    // tunjangan 10%
+    let bpjs = 0.1* gaji_pokok
+    // total gaji nya di tambah dengantunjangan nya
+    let total = tunjangan_jabatan + bpjs + gaji_pokok
+
+    // jika menikah/keluarga
+    let keluarga = (status == "menikah") ? 0.2 * gaji_pokok:0
+    // hasil gaji dari tunjangan , bpjs dan jika berekluarga 
+    let hslnikah = tunjangan_jabatan + bpjs + keluarga + gaji_pokok
+// console.log("total gaji : "+ hslnikah)
     // Memasukkan data ke dalam tabel
-    document.getElementById("nama").innerText = data.nama;
-    document.getElementById("jabatan").innerText = data.jabatan;
-    document.getElementById("status").innerText = data.status;
-    document.getElementById("gaji_pokok").innerText = data.gaji_pokok;
-    document.getElementById("total_gaji").innerText = data.total_gaji;
+    document.getElementById("nama").innerText = nama;
+    document.getElementById("jabatan").innerText = jabatan;
+    document.getElementById("status").innerText = status;
+    document.getElementById("gaji_pokok").innerText ="Rp."+ gaji_pokok;
+    document.getElementById("tunjangan_jabatan").innerText = "Rp."+ tunjangan_jabatan;
+    document.getElementById("bpjs").innerText = bpjs;
+    document.getElementById("gaji_nya").innerText = total;
+    document.getElementById("gaji_nya").innerText = hslnikah;
 </script>
 
 </body>
