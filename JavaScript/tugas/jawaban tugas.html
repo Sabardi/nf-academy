@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Tabel dengan JavaScript</title>
+</head>
+<body>
+
+<table border="1" align="center" width="auto" id="data-table">
+    <!-- tabel header -->
+    <thead bgcolor="#B5C0D0">
+        <tr>
+            <th colspan="2">Data Penggajian Pegawai</th>
+        </tr>
+        <tr>
+            <th>Data Pegawai</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <!-- Tabel data -->
+    <tbody>
+        <tr>
+           <td>Nama</td>
+           <td id="nama"></td>
+        </tr>
+        <tr>
+            <td>Jabatan</td>
+            <td id="jabatan"></td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td id="status"></td>
+        </tr>
+        <tr>
+            <td>Gaji Pokok</td>
+            <td id="gaji_pokok"></td>
+        </tr>
+        <tr>
+            <td>Tunjangan Jabatan</td>
+            <td id="tunjangan_jabatan"></td>
+        </tr>
+        <tr>
+            <td>Tunjangan keluarga</td>
+            <td id="tunjangan_keluarga"></td>
+        </tr>
+        <tr>
+            <td>potongan Bpjs</td>
+            <td id="bpjs"></td>
+        </tr>
+    </tbody>
+    <!-- tabel footer -->
+    <tfoot bgcolor="B5C0D0">
+        <tr>
+            <td>Total Gaji</td>
+            <td id="gaji_nya"></td>
+        </tr>
+    </tfoot>
+</table>
+
+<script>
+    // inisiasi variabel nya
+    let nama = "Ridwan" 
+    let jabatan = "Manager"
+    let status = "menikah"
+    let gaji_pokok , tunjangan, bpjs, keluarga
+
+    
+    // inisiasi pekerjaannya jika gaji nya tsb 
+    if(jabatan == "Manager"){
+        gaji_pokok = 15000000
+    }else if(jabatan == "Asisten Manager"){
+        gaji_pokok = 10000000
+    }else if(jabatan == "Staff"){
+        gaji_pokok = 5000000
+    }
+
+// hitung tunjangan 
+tunjangan = 0.15 * gaji_pokok
+// console.log("tunjangan " + tunjangan)
+
+// hasil sebelum potong bpjs 
+let hasil = gaji_pokok + tunjangan
+// console.log("befor potong bpjs = " + hasil)
+// hitung bjs
+bpjs = 0.1*gaji_pokok
+// console.log("bpjs = " + bpjs)
+
+let hitung = hasil - bpjs
+// console.log("upter potong bpjs = " + hitung)
+
+// jika menikah/keluarga
+keluarga = (status == "menikah") ? 0.2 * gaji_pokok:0
+// console.log("tunjangan keluarga = " + keluarga)
+
+// gaji pokok dan tunjangan di tambah dengan tunjangan keluarga
+let gaji_bersih = keluarga + hitung
+console.log("gaji bersih = "+ gaji_bersih)
+// console.log("total gaji : "+ hslnikah)
+    // Memasukkan data ke dalam tabel
+    document.getElementById("nama").innerText = nama;
+    document.getElementById("jabatan").innerText = jabatan;
+    document.getElementById("status").innerText = status;
+    document.getElementById("gaji_pokok").innerText ="Rp."+ gaji_pokok;
+    document.getElementById("tunjangan_jabatan").innerText = "Rp."+ tunjangan;
+    document.getElementById("tunjangan_keluarga").innerText ="Rp."+ keluarga;
+    document.getElementById("bpjs").innerText = "-"+ "Rp."+ bpjs;
+    document.getElementById("gaji_nya").innerText = gaji_bersih;
+    document.getElementById("gaji_nya").innerText = gaji_bersih;
+</script>
+
+</body>
+</html>
