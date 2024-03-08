@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Tabel dengan JavaScript</title>
+</head>
+<body>
+
+<table border="1" align="center" width="auto" id="data-table">
+    <!-- tabel header -->
+    <thead bgcolor="#B5C0D0">
+        <tr>
+            <th colspan="2">Data Penggajian Pegawai</th>
+        </tr>
+        <tr>
+            <th>Data Pegawai</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <!-- Tabel data -->
+    <tbody>
+        <tr>
+           <td>Nama :</td>
+           <td id="nama"></td>
+        </tr>
+        <tr>
+            <td>Jabatan :</td>
+            <td id="jabatan"></td>
+        </tr>
+        <tr>
+            <td>Status :</td>
+            <td id="status"></td>
+        </tr>
+        <tr>
+            <td>Gaji Pokok :</td>
+            <td id="gaji_pokok"></td>
+        </tr>
+    </tbody>
+    <!-- tabel footer -->
+    <tfoot bgcolor="B5C0D0">
+        <tr>
+            <td>Total Gaji</td>
+            <td id="total_gaji"></td>
+        </tr>
+    </tfoot>
+</table>
+
+<script>
+    // Menyiapkan data
+    var data = {
+        nama: "Ahmad",
+        jabatan: "Pegawai",
+        status: "Menikah",
+        gaji_pokok: "Rp 5.000.000",
+        total_gaji: "Rp .000" // misalnya total gaji ditambah Rp 1.000.000
+    };
+
+    // Memasukkan data ke dalam tabel
+    document.getElementById("nama").innerText = data.nama;
+    document.getElementById("jabatan").innerText = data.jabatan;
+    document.getElementById("status").innerText = data.status;
+    document.getElementById("gaji_pokok").innerText = data.gaji_pokok;
+    document.getElementById("total_gaji").innerText = data.total_gaji;
+</script>
+
+</body>
+</html>
