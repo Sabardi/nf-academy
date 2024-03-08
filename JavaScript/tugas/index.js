@@ -17,7 +17,7 @@ Total Gaji: jumlahlahkan seluruh element gaji (gunakan tfoot) */
 // inisiasi variabel nya
 let nama = "Ridwan" 
 let jabatan = "Manager"
-let status = "belom"
+let status = "menikah"
 let gaji_pokok
 
 // inisiasi pekerjaannya jika gaji nya tsb 
