@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+
+.header{
+    background-image: url('header.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    text-align: center;
+    color: rgb(75, 21, 235);
+    width: 100%;
+    background-size: cover;
+}
+
+.list{
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+}
+.list a{
+    display: block;
+    float: left;
+    text-decoration: none;
+    padding: 14px 14px;
+    text-align: center;
+}
+.list a:hover{
+    background-color: blue;
+    color: black;
+    border-radius: 16px;
+}
+
+.row{
+    content: "";
+    display: table;
+    clear: both; /* memperbaiki penjajaran elemen */
+
+}
+.column{
+    float: left;
+    padding: 10px;
+}
+
+.column.side{
+    width: 25%;
+}
+
+.column.middle{
+    width: 50%;
+}
+
+.foter{
+    background-color: aqua;
+    padding: 10px;
+    text-align: center;
+}
+
