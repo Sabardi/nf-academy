@@ -15,8 +15,9 @@ console.log(nama, pekerjaan,"dan umur "+ umur, berat)
 -- untuk operasi pengurangan angka satu dari bilangan sebelumnya.
  */
 
-let a = 10
-let b = 10
+// let a = 10
+// let b = 10
+
 penjumlahan = a + b
 pengurangan = a - b
 perkalian = a * b
