@@ -9,3 +9,6 @@ Perulangan for digunakan ketika jumlah iterasi sudah diketahui sebelumnya
 
  3.  Perulangan do-while:
  Perulangan do-while mirip dengan while, namun bedanya blok kode dieksekusi terlebih dahulu sebelum kondisi dicek. Ini memastikan bahwa setidaknya satu iterasi akan dieksekusi.
+
+ 4. metode forEach() 
+ digunakan untuk menjalankan fungsi yang disediakan sekali untuk setiap elemen dalam array. Metode ini memungkinkan Anda untuk melakukan iterasi melalui setiap elemen array tanpa perlu menggunakan indeks.
