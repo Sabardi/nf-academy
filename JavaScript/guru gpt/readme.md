@@ -29,7 +29,7 @@
 -	Operator Bitwise
 -	Operator Ternary
 
-6. Percabangan: If, If/else
+6. Percabangan: If, If/else 💕
 -	Percabangan if
 -	Percabangan if/else
 -	Percabangan dengan ternary operator 
