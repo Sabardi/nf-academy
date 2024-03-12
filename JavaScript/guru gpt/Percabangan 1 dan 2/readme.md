@@ -7,3 +7,6 @@ kondisi ? ekspresi1 : ekspresi2
 
 <!-- switch case  -->
 Percabangan switch/case adalah cara lain untuk mengevaluasi ekspresi dengan berbagai kemungkinan nilai dan menjalankan blok kode yang sesuai dengan nilai yang cocok
+
+<!-- nested if -->
+Percabangan di dalam percabangan, juga dikenal sebagai "nested if statements" atau "if statements bersarang", adalah konsep di mana Anda menempatkan satu percabangan if di dalam blok kode dari percabangan if lainnya. Ini memungkinkan Anda untuk mengevaluasi kondisi lebih secara detail dalam beberapa tingkat.
