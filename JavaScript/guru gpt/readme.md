@@ -34,7 +34,7 @@
 -	Percabangan if/else
 -	Percabangan dengan ternary operator 
 
-7. Percabangan II: if/else/if dan switch/case
+7. Percabangan II: if/else/if dan switch/case 💕
 -	Percabangan if/else/if
 -	Percbangan switch/case
 -	Percabangan di dalam percabangan
