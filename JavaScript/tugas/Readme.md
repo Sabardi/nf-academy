@@ -1,0 +1,1 @@
+Tugas berada di masing masing folder berdasarkan materi nya
