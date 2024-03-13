@@ -23,7 +23,9 @@
     <tbody>
         <script>
             var no =1;
+            var warna
             for(s of siswa){
+                warna = (no % 2== 0) ? 'yellow' : 'blue';
                 let ket = (s.nila >= 60) ? "lulus" : "gagal"; //jk nilai lebih dari / sama dengan 60 lulus
                 let grade = ""; //belom di inisiasi
                 let predikat = ""; //belom di inisiasi
@@ -49,6 +51,10 @@
                     break
                     default : predikat = ""; break
                 }
+
+                //1. ambil dulu key nya dan value nya s.nama dan s.nilai
+                //s adalah data di array nya dan siswa yang menampung semua datanya
+                //jk tidak ada key nya data tidak bisa di ambil  
              //di pisah pisah document.write nya biar tidak bingung bagian bagian nya
                /* document.write("<tr>");
                     document.write("<td>" + no+"</td>");
@@ -59,11 +65,24 @@
                     document.write("<td>" + predikat + "</td>");
                     document.write("</tr>");
                     no++; */
-
                     //jika menggunakan 1 document.write
-                    document.write(`<tr>
+                  /*  document.write(`<tr>
                         <td>${no}</td>
-                        <td>${s.nama}</td>
+                        <td>${s.nama}</td> 
+                        <td>${s.nila}</td>
+                        <td>${ket}</td>
+                        <td>${grade}</td>
+                        <td>${predikat}</td>
+                    </tr>`
+                    );
+                    no++
+                    */
+                    
+
+                    //atau memberikan warna
+                    document.write(`<tr bgcolor="${warna}">
+                        <td>${no}</td>
+                        <td>${s.nama}</td> 
                         <td>${s.nila}</td>
                         <td>${ket}</td>
                         <td>${grade}</td>
