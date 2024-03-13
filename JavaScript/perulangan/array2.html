@@ -2,7 +2,7 @@
     let s1 = {"nama": "andi", nila:90};
     let s2 = {"nama": "amin", nila:70};
     let s3 = {"nama": "ana", nila:80};
-    let s4 = {"nama": "isa", nila:90};
+    let s4 = {"nama": "isa", nila:50};
     let s5 = {"nama": "marikan", nila:85};
     let siswa = [s1,s2,s3,s4,s5];
 
@@ -16,28 +16,28 @@
             <th>Nama</th>
             <th>nilai</th>
             <th>keterangan</th>
-            <th>nilai</th>
+            <th>grade</th>
             <th>predikat</th>
         </tr>
     </thead>
     <tbody>
         <script>
-            var no =1
+            var no =1;
             for(s of siswa){
-                let ket = (s.nila >= 60) ? "lulus" : "gagal";
-                let grade = "";
-                let predikat = "";
+                let ket = (s.nila >= 60) ? "lulus" : "gagal"; //jk nilai lebih dari / sama dengan 60 lulus
+                let grade = ""; //belom di inisiasi
+                let predikat = ""; //belom di inisiasi
                 //if multi kondisi
 
-                if(s.nila > 85 && s.nila <= 100) grade = "A";
-                else if (s.nila >= 75 && s.nila <= 85)grade = "B";
-                else if (s.nila >= 60 && s.nila <= 75)grade = "C";
-                else if (s.nila >= 30 && s.nila <= 60)grade = "D";
-                else if (s.nila >= 0 && s.nila <= 30)grade = "E";
-                else grade= "";
+                if(s.nila > 85 && s.nila <= 100) grade = "A"; //jk lebih dari 85 dan nilai kurang dari 100 mk grade A
+                else if (s.nila >= 75 && s.nila <= 85)grade = "B"; //jk lebih dari 75 dan nilai kurang dari 85 mk grade A
+                else if (s.nila >= 60 && s.nila <= 75)grade = "C"; //jk lebih dari 60 dan nilai kurang dari 75 mk grade A
+                else if (s.nila >= 30 && s.nila <= 60)grade = "D"; //jk lebih dari 30 dan nilai kurang dari 60 mk grade A
+                else if (s.nila >= 0 && s.nila <= 30)grade = "E"; //jk lebih dari 30 dan nilai kurang dari 30 mk grade A
+                else grade= ""; //jika tidak ada yg di pilih
 
                 switch(grade){
-                    case "A" : predikat = "sempurna"; 
+                    case "A" : predikat = "sempurna"; //grade nya di inisiasi dari variable sebelum nya jk terpenuhi
                     break
                     case "B" : predikat = "Baik"; 
                     break
@@ -49,6 +49,28 @@
                     break
                     default : predikat = ""; break
                 }
+             //di pisah pisah document.write nya biar tidak bingung bagian bagian nya
+               /* document.write("<tr>");
+                    document.write("<td>" + no+"</td>");
+                    document.write("<td>" + s.nama + "</td>");
+                    document.write("<td>" + s.nila + "</td>");
+                    document.write("<td>" + ket + "</td>");
+                    document.write("<td>" + grade + "</td>");
+                    document.write("<td>" + predikat + "</td>");
+                    document.write("</tr>");
+                    no++; */
+
+                    //jika menggunakan 1 document.write
+                    document.write(`<tr>
+                        <td>${no}</td>
+                        <td>${s.nama}</td>
+                        <td>${s.nila}</td>
+                        <td>${ket}</td>
+                        <td>${grade}</td>
+                        <td>${predikat}</td>
+                    </tr>`
+                    );
+                    no++
             }
         </script>
     </tbody>
