@@ -39,7 +39,7 @@
 -	Percbangan switch/case
 -	Percabangan di dalam percabangan
 
-8. Perulangan
+8. Perulangan 💕
 -	Perulangan For
 -	Perulangan While
 -	Perulangan do/while
