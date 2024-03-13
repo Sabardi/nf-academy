@@ -1,0 +1,27 @@
+<script>
+    //deklarasi array
+    // array dimulai dari index 0
+    var buah = ["pepaya", "pisang", "anggur","manggis"];
+    //mengganti index nya
+    buah[2] = "abon";
+
+    for(var i = 0; i<buah.length; i++){
+        document.write("<br>" + buah[i]);
+    }
+    document.write("<hr>")
+</script>
+
+<script>
+    let p1 = {'nama' : "budi", 'devisi':"sdm", 'gaji':7000000};
+    let p2 = {'nama' : "andi", 'devisi':"marketing", 'gaji':8000000};
+    let p3 = {'nama' : "ilham", 'devisi':"lapangan", 'gaji':9000000};
+    
+    let pegawai = [p1,p2,p3]
+
+    <!-- document.write(pegawai) -->
+    for(p of pegawai){
+        document.write("<br>" + p.nama)
+        document.write("<br>" + p.devisi)
+        document.write("<br>" + p.gaji)
+    }
+</script>

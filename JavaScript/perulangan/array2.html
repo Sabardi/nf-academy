@@ -1,0 +1,55 @@
+<script>
+    let s1 = {"nama": "andi", nila:90};
+    let s2 = {"nama": "amin", nila:70};
+    let s3 = {"nama": "ana", nila:80};
+    let s4 = {"nama": "isa", nila:90};
+    let s5 = {"nama": "marikan", nila:85};
+    let siswa = [s1,s2,s3,s4,s5];
+
+ //   document.write("data :"+ siswa)
+</script>
+
+<table style="padding: 10; text-align: center; width: 100%;">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>nilai</th>
+            <th>keterangan</th>
+            <th>nilai</th>
+            <th>predikat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <script>
+            var no =1
+            for(s of siswa){
+                let ket = (s.nila >= 60) ? "lulus" : "gagal";
+                let grade = "";
+                let predikat = "";
+                //if multi kondisi
+
+                if(s.nila > 85 && s.nila <= 100) grade = "A";
+                else if (s.nila >= 75 && s.nila <= 85)grade = "B";
+                else if (s.nila >= 60 && s.nila <= 75)grade = "C";
+                else if (s.nila >= 30 && s.nila <= 60)grade = "D";
+                else if (s.nila >= 0 && s.nila <= 30)grade = "E";
+                else grade= "";
+
+                switch(grade){
+                    case "A" : predikat = "sempurna"; 
+                    break
+                    case "B" : predikat = "Baik"; 
+                    break
+                    case "C" : predikat = "Cukup"; 
+                    break
+                    case "D" : predikat = "Kurang"; 
+                    break
+                    case "E" : predikat = "Buruk"; 
+                    break
+                    default : predikat = ""; break
+                }
+            }
+        </script>
+    </tbody>
+</table>
