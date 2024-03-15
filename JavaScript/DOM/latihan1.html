@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Dom</title>
+</head>
+<body>
+
+    <!-- <button id="isi">klik aku</button> -->
+    <p id="isi"></p>
+    <p id="warna">ini berwarna biru dari file js nya</p>
+    <script>
+        document.getElementById("isi").innerHTML = "hallo saya sabardi";
+        let div = document.createElement('div');
+        div.id = 'content';
+        div.innerHTML = '<p> contoh menambahjan element  </p>'
+        document.body.appendChild(div);
+
+        // pewarnaan
+        document.getElementById("warna").style.color = "blue"
+    </script>
+</body>
+</html>
