@@ -5,7 +5,7 @@ function dataperson() {
     let hobi = form.hoby.value
     
     let input = "Nama  " + nama + "<br> pekerjaan sebagai " + pekerjaan + "<br> hoby " + hobi;
-    let noinput = "maaf nama yang anda inputkan belom terisi";
+    let noinput = "maaf anda harus menginputkan data nya";
     let hasil = (nama && pekerjaan && hobi != '') ? input : noinput;
     document.getElementById("hasil").innerHTML = hasil
 

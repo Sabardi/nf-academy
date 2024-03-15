@@ -18,10 +18,12 @@
 
 
 function dataperson() {
-    var nama = document.getElementById('nama').value;
-    var pekerjaan = document.getElementById('pekerjaan').value;
-    var hobby = document.getElementById('hoby').value;
+    let nama = document.getElementById('nama').value;
+    let pekerjaan = document.getElementById('pekerjaan').value;
+    let hobby = document.getElementById('hoby').value;
+    let  input = `Nama: ${nama} <br> Pekerjaan: ${pekerjaan} <br> Hobby: ${hobby}`
 
-    var hasil = document.getElementById('hasil');
-    hasil.innerHTML = `Nama: ${nama} <br> Pekerjaan: ${pekerjaan}<br> Hobby: ${hobby}`;
+    let noinput = "maaf anda harus menginputkan data nya";
+    let hasil = (nama && pekerjaan && hobby != '') ? input : noinput;
+    document.getElementById("hasil").innerHTML = hasil
 }
