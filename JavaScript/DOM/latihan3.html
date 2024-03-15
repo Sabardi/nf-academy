@@ -6,14 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
-        <label for="">
-            <input type="text" name="" id="" placeholder="Silahkan masukan nama anda"> <br>
+    <form id="frm" action="">
+        <label for=""> nama
+            <input type="text" name="" id="nama" placeholder="Silahkan masukan nama anda"> <br>
         </label>
-        <label for="">
-            <input type="text" name="" id="" placeholder="Silahkan masukan kelas anda"> <br>
+        <label for="">kelas
+            <input type="text" name="" id="kelas" placeholder="Silahkan masukan kelas anda"> <br>
         </label>
-        <label for=""><button id>masuk</button></label>
+        <input type="button" value="kirim" name="proses" onclick="Salam()" id="">
+        <p id="hasil"></p>
     </form>
+
+    <script>
+        function Salam(params) {
+            let siswa = document.getElementById("frm").nama.value;
+            let kelas = document.getElementById("frm").kelas.value;
+            let input = "Selamat pagi " + siswa + "<br> kelas " + kelas;
+            let noinput = "maaf nama yang anda inputkan belom terisi";
+            let hasil = (siswa && kelas !="") ? input:noinput;
+
+            document.getElementById("hasil").innerHTML = hasil
+        }
+    </script>
 </body>
 </html>
