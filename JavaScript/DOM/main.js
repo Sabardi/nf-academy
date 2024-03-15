@@ -7,8 +7,7 @@ function dataperson() {
     let input = "Nama  " + nama + "<br> pekerjaan sebagai " + pekerjaan + "<br> hoby " + hobi;
     let noinput = "maaf nama yang anda inputkan belom terisi";
     let hasil = (nama && pekerjaan && hobi != '') ? input : noinput;
-            // let hasil = (siswa && kelas !="") ? input:noinput;
-            document.getElementById("hasil").innerHTML = hasil
+    document.getElementById("hasil").innerHTML = hasil
 
     //ubahlah kode 
     // isian nama 
