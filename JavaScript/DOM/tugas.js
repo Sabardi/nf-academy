@@ -23,5 +23,5 @@ function dataperson() {
     var hobby = document.getElementById('hoby').value;
 
     var hasil = document.getElementById('hasil');
-    hasil.innerHTML = `Nama: ${nama}, Pekerjaan: ${pekerjaan}, Hobby: ${hobby}`;
+    hasil.innerHTML = `Nama: ${nama} <br> Pekerjaan: ${pekerjaan}<br> Hobby: ${hobby}`;
 }
