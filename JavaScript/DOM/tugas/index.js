@@ -39,6 +39,12 @@ function hitung(){
         bpjs = 0.1 * gaji_pokok
         gajibersih = (gaji_pokok + tunjangan) - bpjs
 
+    }else{
+        alert("Di pilih Dulu")
+        gaji_pokok = 0
+        tunjangan = 0.15 * gaji_pokok
+        bpjs = 0.1 * gaji_pokok
+        gajibersih = (gaji_pokok + tunjangan) - bpjs
     }
 
 // jika menikah/keluarga
