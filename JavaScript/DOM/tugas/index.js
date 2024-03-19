@@ -14,36 +14,46 @@ for (let l in statusnya){
 
 frm.jabatan.innerHTML = opsiJabatan;
 frm.status.innerHTML = opsistatus;
-function transaksi(){
+function hitung(){
     let nama = frm.nama.value;
-    let produk = frm.jabatan.value;
-    let jumlah = frm.status.value;
+    let jabatan = frm.jabatan.value;
+    let status = frm.status.value;
+    let gaji_pokok , tunjangan, bpjs, keluarga ,gajibersih
 
-    let harga;
+    // inisiasi pekerjaannya jika gaji nya tsb 
+    if(jabatan == "Manager"){
+        gaji_pokok = 15000000
+        tunjangan = 0.15 * gaji_pokok
+        bpjs = 0.1 * gaji_pokok
+        gajibersih = (gaji_pokok + tunjangan) - bpjs
 
-    switch(jabatan){
-        case 'tv':
-            harga = 2000000;
-            break;
-        case 'ac':
-            harga = 3000000;
-            break;
-        case 'kulkas':
-            harga = 5000000;
-            break;
-        default: 
-            harga = 0
+    }else if(jabatan == "Asisten Manager"){
+        gaji_pokok = 10000000
+        tunjangan = 0.15 * gaji
+        bpjs = 0.1 * gaji_pokok
+        gajibersih = (gaji_pokok + tunjangan) - bpjs
+
+    }else if(jabatan == "Staff"){
+        gaji_pokok = 5000000
+        tunjangan = 0.15 * gaji
+        bpjs = 0.1 * gaji_pokok
+        gajibersih = (gaji_pokok + tunjangan) - bpjs
+
     }
 
-    let hargaKotor = harga * jumlah
-    // diskon 
-    let diskon;
-    if(produk == 'kulkas' && jumlah >= 3) diskon = 0.3 * hargaKotor;
-    else if(produk == 'ac' && jumlah >= 3) diskon = 0.2 * hargaKotor;
-    else diskon = 0.1 * hargaKotor;
-    swal(`
+// jika menikah/keluarga
+keluarga = (status == "Sudah Menikah") ? 0.2 * gaji_pokok:0
+let totalGaji= gajibersih + keluarga
+    // let potongBpjs = totalGaji - bpjs
+
+swal(`
     Nama Pelanggan : ${nama}
-    Produk di beli : ${produk}
-    Harga produk : ${harga}
-    jumlah produk : ${jumlah}`);
+    Jabatan : ${jabatan}
+    status  : ${status}
+    gaji pokok : ${gaji_pokok}
+    Tunjangan jabatan : ${tunjangan}
+    Potongan BPJS : ${bpjs}
+    Tunjangan keluarga : ${keluarga}
+    gaji bersih : ${totalGaji}
+    `);
 }
