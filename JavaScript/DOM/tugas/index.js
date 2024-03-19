@@ -49,7 +49,7 @@ let totalGaji= gajibersih + keluarga
 let hasil = document.getElementById("hasil");
 hasil.innerHTML = `
 <table border="1" style="border-collapse: collapse; width: 100%;">
-<thead>
+<thead bgcolor="#B5C0D0">
     <tr>
         <th colspan="2">Cetak Data Pegawai</th> 
     </tr>
@@ -69,26 +69,26 @@ hasil.innerHTML = `
     </tr>
     <tr>
         <td>Gaji Pokok</td>
-        <td>${gaji_pokok}</td>
+        <td>${gaji_pokok.toLocaleString("ID", {style: "currency", currency: "IDR"})}</td>
     </tr>
     <tr>
         <td>Tunjangan</td>
-        <td>${tunjangan}</td>
+        <td>${tunjangan.toLocaleString("ID", {style: "currency", currency: "IDR"})}</td>
     </tr>
     <tr>
         <td>Nama</td>
-        <td>${bpjs}</td>
+        <td> - ${bpjs.toLocaleString("ID", {style: "currency", currency: "IDR"})}</td>
     </tr>
     <tr>
         <td>Tunjangan keluarga</td>
-        <td>${keluarga}</td>
+        <td>${keluarga.toLocaleString("ID", {style: "currency", currency: "IDR"})}</td>
     </tr>
 
 </tbody>
-<tfoot>
+<tfoot bgcolor="B5C0D0">
     <tr>
         <td>Gaji bersih</td>
-        <td>${totalGaji}</td>
+        <td>${totalGaji.toLocaleString("ID", {style: "currency", currency: "IDR"})}</td>
     </tr>
 </tfoot>
 `
@@ -98,11 +98,11 @@ swal(`
     Nama  : ${nama}
     Jabatan : ${jabatan}
     status  : ${status}
-    gaji pokok : ${gaji_pokok}
-    Tunjangan jabatan : ${tunjangan}
-    Potongan BPJS : ${bpjs}
-    Tunjangan keluarga : ${keluarga}
-    gaji bersih : ${totalGaji}
+    gaji pokok : ${gaji_pokok.toLocaleString("ID", {style: "currency", currency: "IDR"})}
+    Tunjangan jabatan : ${tunjangan.toLocaleString("ID", {style: "currency", currency: "IDR"})}
+    Potongan BPJS : ${bpjs.toLocaleString("ID", {style: "currency", currency: "IDR"})}
+    Tunjangan keluarga : ${keluarga.toLocaleString("ID", {style: "currency", currency: "IDR"})}
+    gaji bersih : ${totalGaji.toLocaleString("ID", {style: "currency", currency: "IDR"})}
     `);
 }
 
