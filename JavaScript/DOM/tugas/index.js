@@ -57,7 +57,7 @@ hasil.innerHTML = `
 <table border="1" style="border-collapse: collapse; width: 100%;">
 <thead bgcolor="#B5C0D0">
     <tr>
-        <th colspan="2">Cetak Data Pegawai</th> 
+        <th colspan="2">Slip Gaji</th> 
     </tr>
 </thead>
 <tbody>
@@ -99,17 +99,104 @@ hasil.innerHTML = `
 </tfoot>
 `
 
+Swal.fire({
+    html: `
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slip Gaji</title>
+<style>
+    h1 {
+        display: flex;
+        justify-content: center;
+    }
 
-swal(`
-    Nama  : ${nama}
-    Jabatan : ${jabatan}
-    status  : ${status}
-    gaji pokok : ${gaji_pokok.toLocaleString("ID", {style: "currency", currency: "IDR"})}
-    Tunjangan jabatan : ${tunjangan.toLocaleString("ID", {style: "currency", currency: "IDR"})}
-    Potongan BPJS : ${bpjs.toLocaleString("ID", {style: "currency", currency: "IDR"})}
-    Tunjangan keluarga : ${keluarga.toLocaleString("ID", {style: "currency", currency: "IDR"})}
-    gaji bersih : ${totalGaji.toLocaleString("ID", {style: "currency", currency: "IDR"})}
-    `);
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        text-align: left;
+    }
+
+    tbody tr td{
+        border: 1px solid black;
+        padding-left: 10px;
+    }
+    tfoot tr td{
+        background-color: lightyellow;
+        border: 1px solid black;
+        padding-left: 10px;
+    }
+    footer p {
+        display: flex;
+        justify-content: center;
+        font-size: 10px;
+    }
+</style>
+</head>
+<body>
+<fieldset>
+    <h1>Slip Gaji</h1>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <td>Nama</td>
+                <td>:</td>
+                <td>${nama}</td>
+            </tr>
+            <tr>
+                <td>Jabatan</td>
+                <td>:</td>
+                <td>${jabatan}</td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>:</td>
+                <td>${status}</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Gaji Pokok</td>
+                <td colspan="2">${gaji_pokok.toLocaleString("ID", {style: "currency", currency: "IDR"})}</td>
+            </tr>
+            <tr>
+                <td>Tunjangan Jabatan (15% dari gaji)</td>
+                <td colspan="2">${tunjangan.toLocaleString("ID", {style: "currency", currency: "IDR"})}</td>
+            </tr>
+            <tr>
+                <td>Tunjangan Keluarga (20% dari gaji)</td>
+                <td colspan="2">${keluarga.toLocaleString("ID", {style: "currency", currency: "IDR"})}</td>
+            </tr>
+            <tr>
+                <td>BPJS (-10% dari gaji)</td>
+                <td colspan="2">- ${bpjs.toLocaleString("ID", {style: "currency", currency: "IDR"})}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Jumlah</th>
+                <td colspan="2">${totalGaji.toLocaleString("ID", {style: "currency", currency: "IDR"})}</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>
+</fieldset>
+<footer>
+    <p>copyright &copy; 2024 SABARDI</p>
+</footer>
+<script src="script.js"></script>
+</body>
+
+</html>
+<button onclick="Swal.close()">Close</button>
+    `,
+    
+    showCloseButton: false,
+    showConfirmButton: false,
+    showCancelButton: false,
+    allowOutsideClick: false,
+  });
 }
-
-
