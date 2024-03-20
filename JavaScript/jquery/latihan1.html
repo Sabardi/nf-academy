@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // deklaseasi untuk selektor tag 
+            $("input").click(function(){
+                alert("selamat berbuka puasa");
+            })
+            // menggunakan class 
+            $(".tes").css("background-color","orange");
+
+            // menggunakan id 
+            $("#test").css({
+                "background-color":"orange",
+                "margin":"100px",
+                "padding":"100px"
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="submit" name="salam" id="">
+    <p class="tes">Hallo</p>
+    <p id="test">Halloo alll</p>
+</body>
+</html>
