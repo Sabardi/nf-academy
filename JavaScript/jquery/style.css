@@ -16,3 +16,8 @@ body{
     height: 400px;
     cursor: pointer;
 }
+
+.swal-button{
+    text-align: center;
+    /* border-image-width: ; */
+}
