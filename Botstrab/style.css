@@ -1,0 +1,20 @@
+.buttons-copy{
+    background-color: aqua;
+    border-radius: 8px;
+}
+.buttons-csv{
+    background-color: rgb(95, 67, 177);
+    border-radius: 8px;
+}
+.buttons-pdf{
+    background-color: blue;
+    border-radius: 8px;
+}
+.buttons-print{
+    background-color: tomato;
+    border-radius: 8px;
+}
+.buttons-excel{
+    background-color: rgb(105, 255, 71);
+    border-radius: 8px;
+}
