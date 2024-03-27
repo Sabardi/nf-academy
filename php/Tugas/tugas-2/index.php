@@ -114,23 +114,23 @@ if($produk == "Tv" && $jumlahBeli >0){
                     </tr>
                     <tr>
                         <td>harga satuan</td>
-                        <td><?= $hargaSatuan ?></td>
+                        <td>Rp <?= number_format($hargaSatuan, 0,',', '.') ?> </td>
                     </tr>
                     <tr>
                         <td>total belanja</td>
-                        <td><?= $totalBelanja ?></td>
+                        <td>Rp <?= number_format($totalBelanja, 0,',', '.') ?></td>
                     </tr>
                     <tr>
                         <td>diskon</td>
-                        <td><?= $diskon ?></td>
+                        <td>Rp <?= number_format($diskon, 0,',', '.') ?></td>
                     </tr>
                     <tr>
                         <td>ppn</td>
-                        <td><?= $ppn ?></td>
+                        <td>Rp <?= number_format($ppn, 0,',', '.') ?></td>
                     </tr>
                     <tr>
                         <td>harga bersih</td>
-                        <td><?= $hargaBersih ?></td>
+                        <td>Rp <?=  number_format($hargaBersih, 0,',', '.') ?></td>
                     </tr>
                 </thead>
             </table>
