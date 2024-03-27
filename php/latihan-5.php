@@ -5,6 +5,7 @@
 $nama = $_POST["Nama"];
 $matkul = $_POST["Matkul"];
 $nilai = $_POST["Nilai"];
+$proses = $_POST["proses"];
 
 
 $ket = ($nilai >=60) ? "lulus" : "gagal";
@@ -39,12 +40,9 @@ switch ($grade) {
                 break;
         default:
             # code...
-            $predikat = "";
+            $predikat = "ulang dulu";
             break;
 }
-
-
-
 
 ?>
 <!-- <table border="1">
@@ -107,12 +105,18 @@ switch ($grade) {
                      </label>
                      <input type="text" name="Nilai" class="form-control" id="exampleInputEmail1" />
                  </div>
-				<button type="submit" class="btn btn-primary">
+				<button name="proses" type="submit" class="btn btn-primary">
 					Submit
 				</button>
 			</form>
 		</div>
 
+<?php        
+
+// untuk error hendling / menghilangkan output nya sebelum di tampilkan / di cek
+if(isset($proses)){
+
+    ?>
 		<div class="col-md-6">
 			<table class="table">
 				<thead>
@@ -161,3 +165,5 @@ switch ($grade) {
 		</div>
 	</div>
 </div>
+
+<?php } ?>
