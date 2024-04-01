@@ -19,6 +19,7 @@ include_once "webMenu.php";
                             foreach ($menuAtas as $key => $value) {
                                 echo "<li><a href='index.php?hal=$key'>$value</a></li>";
                             }
+
                         ?>
                     </ul>
                 </nav>
