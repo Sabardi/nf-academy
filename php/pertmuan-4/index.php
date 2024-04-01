@@ -1,7 +1,7 @@
 <?php
-include "atas.php";
-include "isi.php";
-include "bawah.php";
+include_once "atas.php";
+include_once "isi.php";
+include_once "bawah.php";
 
 
 ?>
