@@ -17,7 +17,14 @@ include_once "webMenu.php";
                         <?php
                             // menggunakan  associative array untuk mengakses array yang ada di file webMenu
                             foreach ($menuAtas as $key => $value) {
-                                echo "<li><a href='index.php?hal=$key'>$value</a></li>";
+                                // echo "<li><a  href='index.php?hal=$key'>$value</a></li>";
+                                
+                                if (!empty($_GET['hal']) && $_GET['hal'] == $key) {
+
+                                    echo "<li class='active'><a  href='index.php?hal=$key'>$value</a></li>";
+                                }else{
+                                    echo "<li><a  href='index.php?hal=$key'>$value</a></li>";
+                                }
                             }
                         ?>
                     </ul>
