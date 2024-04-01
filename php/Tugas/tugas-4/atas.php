@@ -9,7 +9,8 @@
     <div class="row">
         <div class="col-lg-3 col-md-3">
             <div class="header__logo">
-                <a href="index.php"><img src="img/logo.png" alt=""></a>
+                <!-- <span>Sabardi</span> -->
+                <a href="index.php"><img src="img/sabardi.png" alt=""></a>
             </div>
         </div>
         <div class="col-lg-6 col-md-6">
