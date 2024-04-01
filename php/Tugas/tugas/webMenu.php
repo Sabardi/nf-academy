@@ -5,16 +5,15 @@
 $menuAtas = [
     "Home"=>"Home",
     "Shope"=>"Shope", 
-    "Pages"=>"Pages",
+    "About"=>"About",
     "Blog"=>"Blog",
     "Contact"=>"Contact",
 ];
-
 // menu untuk di bagian bawah 
 $menuBawah = [
     "Home"=>"Home.php",
     "Shope"=>"Shope.php", 
-    "Pages"=>"Pages.php",
+    "About"=>"About.php",
     "Blog"=>"Blog.php",
     "Contact"=>"Contact.php",
 ];

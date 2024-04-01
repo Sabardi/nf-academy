@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb__text">
-                    <h4>Shop</h4>
+                    <h4>Blog</h4>
                     <div class="breadcrumb__links">
                         <a href="index.php">Home</a>
                         <span>Blog</span>
