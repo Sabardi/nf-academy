@@ -4,19 +4,18 @@
 //menu untuk bagian atas
 $menuAtas = [
     "Home"=>"Home",
-    "Shop"=>"Shop", 
+    "Shope"=>"Shope", 
     "Pages"=>"Pages",
     "Blog"=>"Blog",
-    "Contacts"=>"Contacts"
+    "Contact"=>"Contact",
 ];
 
 // menu untuk di bagian bawah 
 $menuBawah = [
     "Home"=>"Home.php",
-    "Shop"=>"Shop.php", 
+    "Shope"=>"Shope.php", 
     "Pages"=>"Pages.php",
     "Blog"=>"Blog.php",
-    "Contacts"=>"Contacts"
-
+    "Contact"=>"Contact.php",
 ];
 ?>
