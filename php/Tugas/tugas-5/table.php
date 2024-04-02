@@ -25,6 +25,7 @@ $mahasiswa = new Mahasiswa($nim, $nama, $universitas, $matakuliah, $nilai);
 
 <div class="container mt-5">
   <h2 class="mb-4">Daftar Mahasiswa</h2>
+  <a href="index.php" class="btn btn-primary">Kembali</a>
   <table class="table table-bordered table-striped">
     <thead class="thead-dark">
       <tr>

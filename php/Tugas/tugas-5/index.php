@@ -23,7 +23,7 @@
       <label for="universitas">Universitas:</label>
       <select class="form-control" name="universitas" id="universitas" required>
         <option value="">Pilih Universitas</option>
-        <option value="Universitas A">Universitas A</option>
+        <option value="Universitas A">Universitas </option>
         <option value="Universitas B">Universitas B</option>
         <option value="Universitas C">Universitas C</option>
         <!-- Tambahkan opsi universitas lainnya sesuai kebutuhan -->
