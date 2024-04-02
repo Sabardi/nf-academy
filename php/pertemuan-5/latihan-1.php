@@ -45,7 +45,6 @@ echo "<hr>";
 function salam(){
     echo "selamat pagi gaest";
 }
-
 salam("");
 
 // fungsi menggunakan parameter dan argumen 
