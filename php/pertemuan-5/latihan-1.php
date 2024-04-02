@@ -54,5 +54,22 @@ function sapa($kawan) {
     echo "selamat pagi $kawan";
 }
 echo "<br>";
+// atau memasukan variabel yang sudah ada
+$nam = "rosin";
 sapa("ibrahim");
+
+echo "<br>";
+
+sapa($nam);
+
+//membuat parameter bersama argument nya
+function kawan($kawan = "sanardi") {
+    echo "selamat pagi $kawan";
+}
+
+echo "<br>";
+
+kawan();
+// bisa di isi kembali fungsi nya kawan("nama nya);
+
 ?>
