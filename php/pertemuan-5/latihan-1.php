@@ -37,8 +37,22 @@ foreach ($arrayBuah as $buah){
     echo $buah."<br/>";
 }
 
-echo "<br/>";
+echo "<hr>";
+echo "<h1>Fungsi void</h1>";
+echo "<hr>";
 
+// fungsi tanpa parameter / arguments
+function salam(){
+    echo "selamat pagi gaest";
+}
 
+salam("");
 
+// fungsi menggunakan parameter dan argumen 
+
+function sapa($kawan) {
+    echo "selamat pagi $kawan";
+}
+echo "<br>";
+sapa("ibrahim");
 ?>
