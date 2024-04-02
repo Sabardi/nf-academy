@@ -10,7 +10,7 @@
 
 <div class="container mt-5">
   <h2>Form Input Data Mahasiswa</h2>
-  <form action="table.php" method="post">
+  <form action="table.php?aksi=kirim" method="post">
     <div class="form-group">
       <label for="nim">NIM:</label>
       <input type="text" class="form-control" name="nim" id="nim" placeholder="Masukkan NIM" required>

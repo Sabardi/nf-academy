@@ -1,7 +1,9 @@
 <?php
 include 'class.php';
-
-if($_SERVER['REQUEST_METHOD']== "POST"){
+$aksi= $_GET['aksi'];
+if ($aksi=='kirim') {
+  //pilih salah satu
+// if($_SERVER['REQUEST_METHOD']== "POST"){
 
 // Ambil data dari form HTML
 $nim = $_POST['nim'];
