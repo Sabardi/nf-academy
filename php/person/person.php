@@ -11,7 +11,7 @@ class person{
     public function cetak(){
         echo "<br>Nama: ".$this->nama;
         echo "<br>Gender: ".$this->gender;
-}
+    }
 }
 
 ?>
